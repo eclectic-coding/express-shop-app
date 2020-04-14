@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "extends": ["config:base"],
   "includePaths": ["package.json"],
   "semanticCommits": true,
