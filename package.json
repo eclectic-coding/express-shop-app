@@ -5,19 +5,13 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon app.js",
+    "start": "kport 4000 && nodemon app.js",
     "start-server": "node app.js"
   },
   "author": "Maximilian Schwarzmüller",
   "license": "ISC",
   "devDependencies": {
     "nodemon": "^2.0.2"
-  },
-  "nodemonConfig": {
-    "ignore": [
-      "data/products.json",
-      "data/cart.json"
-    ]
   },
   "dependencies": {
     "dotenv": "^8.2.0",
