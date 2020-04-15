@@ -5,13 +5,13 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "kport 4000 && nodemon app.js",
+    "start": "kport 3000 && nodemon app.js",
     "start-server": "node app.js"
   },
   "author": "Maximilian Schwarzmüller",
   "license": "ISC",
   "devDependencies": {
-    "nodemon": "^2.0.2"
+    "nodemon": "^2.0.3"
   },
   "dependencies": {
     "dotenv": "^8.2.0",

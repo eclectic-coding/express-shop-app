@@ -5,35 +5,47 @@ const express = require('express')
 const mongoose = require('mongoose')
 
 const errorController = require('./controllers/error')
-// const User = require('./models/user')
+const User = require('./models/user')
 
 const app = express()
 
 app.set('view engine', 'ejs')
 app.set('views', 'views')
 
-// const adminRoutes = require('./routes/admin')
-// const shopRoutes = require('./routes/shop')
+const adminRoutes = require('./routes/admin')
+const shopRoutes = require('./routes/shop')
 
 app.use(express.urlencoded({ extended: false }))
 app.use(express.static(path.join(__dirname, 'public')))
 
 app.use((req, res, next) => {
-  User.findById('5e95caf0d06e714617516ad0')
+  User.findById('5e97131ad4abf71c5496c18a')
     .then(user => {
-      req.user = new User(user.name, user.email, user.cart, user._id)
+      req.user = user
       next()
     })
     .catch(err => console.log(err))
 })
 
-// app.use('/admin', adminRoutes)
-// app.use(shopRoutes)
+app.use('/admin', adminRoutes)
+app.use(shopRoutes)
 
 app.use(errorController.get404)
 
 mongoose.connect(process.env.MONGODB_LOGIN)
-  .then(result => {
+  .then(() => {
+    User.findOne().then((user) => {
+      if (!user) {
+        const user = new User({
+          name: 'Chuck',
+          email: 'chuck@test.com',
+          cart: {
+            items: []
+          }
+        })
+        user.save()
+      }
+    })
     app.listen(3000)
   })
   .catch(err => {
