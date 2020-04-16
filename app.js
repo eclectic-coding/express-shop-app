@@ -14,6 +14,7 @@ app.set('views', 'views')
 
 const adminRoutes = require('./routes/admin')
 const shopRoutes = require('./routes/shop')
+const authRoutes = require('./routes/auth')
 
 app.use(express.urlencoded({ extended: false }))
 app.use(express.static(path.join(__dirname, 'public')))
@@ -29,8 +30,11 @@ app.use((req, res, next) => {
 
 app.use('/admin', adminRoutes)
 app.use(shopRoutes)
+app.use(authRoutes)
 
 app.use(errorController.get404)
+
+const port = process.env.PORT;
 
 mongoose.connect(process.env.MONGODB_LOGIN)
   .then(() => {
@@ -46,7 +50,7 @@ mongoose.connect(process.env.MONGODB_LOGIN)
         user.save()
       }
     })
-    app.listen(3000)
+    app.listen(port)
   })
   .catch(err => {
     console.log(err)
