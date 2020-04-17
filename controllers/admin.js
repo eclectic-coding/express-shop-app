@@ -1,6 +1,6 @@
 const Product = require('../models/product');
 
-exports.getAddProduct = (req, res, next) => {
+exports.getAddProduct = (req, res) => {
   res.render('admin/edit-product', {
     pageTitle: 'Add Product',
     path: '/admin/add-product',
@@ -9,7 +9,7 @@ exports.getAddProduct = (req, res, next) => {
   });
 };
 
-exports.postAddProduct = (req, res, next) => {
+exports.postAddProduct = (req, res) => {
   const title = req.body.title;
   const imageUrl = req.body.imageUrl;
   const price = req.body.price;
@@ -23,7 +23,7 @@ exports.postAddProduct = (req, res, next) => {
   });
   product
     .save()
-    .then(result => {
+    .then(() => {
       // console.log(result);
       console.log('Created Product');
       res.redirect('/admin/products');
@@ -33,7 +33,7 @@ exports.postAddProduct = (req, res, next) => {
     });
 };
 
-exports.getEditProduct = (req, res, next) => {
+exports.getEditProduct = (req, res) => {
   const editMode = req.query.edit;
   if (!editMode) {
     return res.redirect('/');
@@ -55,7 +55,7 @@ exports.getEditProduct = (req, res, next) => {
     .catch(err => console.log(err));
 };
 
-exports.postEditProduct = (req, res, next) => {
+exports.postEditProduct = (req, res) => {
   const prodId = req.body.productId;
   const updatedTitle = req.body.title;
   const updatedPrice = req.body.price;
@@ -70,17 +70,15 @@ exports.postEditProduct = (req, res, next) => {
       product.imageUrl = updatedImageUrl;
       return product.save();
     })
-    .then(result => {
+    .then(() => {
       console.log('UPDATED PRODUCT!');
       res.redirect('/admin/products');
     })
     .catch(err => console.log(err));
 };
 
-exports.getProducts = (req, res, next) => {
+exports.getProducts = (req, res) => {
   Product.find()
-    // .select('title price -_id')
-    // .populate('userId', 'name')
     .then(products => {
       console.log(products);
       res.render('admin/products', {
@@ -93,7 +91,7 @@ exports.getProducts = (req, res, next) => {
     .catch(err => console.log(err));
 };
 
-exports.postDeleteProduct = (req, res, next) => {
+exports.postDeleteProduct = (req, res) => {
   const prodId = req.body.productId;
   Product.findByIdAndRemove(prodId)
     .then(() => {
