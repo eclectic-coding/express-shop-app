@@ -55,18 +55,6 @@ const port = process.env.PORT
 
 mongoose.connect(process.env.MONGODB_LOGIN)
   .then(() => {
-    User.findOne().then((user) => {
-      if (!user) {
-        const user = new User({
-          name: 'Chuck',
-          email: 'chuck@test.com',
-          cart: {
-            items: []
-          }
-        })
-        user.save()
-      }
-    })
     app.listen(port)
   })
   .catch(err => {

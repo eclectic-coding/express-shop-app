@@ -8,12 +8,20 @@
     "start": "PORT=3000 nodemon app.js",
     "start-server": "node app.js"
   },
-  "author": "Maximilian Schwarzmüller",
+  "author": {
+    "name": "Chuck Smith",
+    "email": "chuck@eclecticsaddlebag.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/:eclectic-coding/express-shop-app"
+  },
   "license": "ISC",
   "devDependencies": {
     "nodemon": "^2.0.3"
   },
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "connect-mongodb-session": "^2.3.1",
     "dotenv": "^8.2.0",
     "ejs": "^3.0.2",
