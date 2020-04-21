@@ -1,7 +1,7 @@
 {
   "name": "nodejs-complete-guide",
   "version": "1.0.0",
-  "description": "Complete Node.js Guide",
+  "description": "Complete Node.js Guide, Express App",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -16,7 +16,7 @@
     "type": "git",
     "url": "https://github.com/:eclectic-coding/express-shop-app"
   },
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "nodemon": "^2.0.3"
   },
@@ -30,6 +30,8 @@
     "express": "^4.17.1",
     "express-session": "^1.17.1",
     "mongodb": "^3.5.6",
-    "mongoose": "^5.9.9"
+    "mongoose": "^5.9.9",
+    "nodemailer": "^6.4.6",
+    "nodemailer-sendgrid-transport": "^0.2.0"
   }
 }
