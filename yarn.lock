@@ -128,11 +128,12 @@ anymatch@~3.1.1:
     normalize-path "^3.0.0"
     picomatch "^2.0.4"
 
-archetype@0.10.x:
-  version "0.10.2"
-  resolved "https://registry.yarnpkg.com/archetype/-/archetype-0.10.2.tgz#9ec23fbffef5367da9c67b6b63bf74284bf54bef"
-  integrity sha512-n3RPIiMYM+rsKWbv1HYJlAcqXg118c4wN0e0LWK700g5TCcvS1ZzskMS/4FOBiplQzBOcN+uTIqEfs/ePPhpAg==
+archetype@0.11.x:
+  version "0.11.3"
+  resolved "https://registry.yarnpkg.com/archetype/-/archetype-0.11.3.tgz#4bebf15e19cf939edef214f818afe29b77b59c20"
+  integrity sha512-dlZfyq5xke/qPz1l3I76HdeO3zku40wPkejUhqGpf6E7JnhUz9IgMJKPY7a7+LkOQ3/VKFJBbOGv4T+sK1vUoA==
   dependencies:
+    lodash.clonedeep "4.x"
     lodash.set "4.x"
     mpath "0.5.1"
     standard-error "1.1.0"
@@ -543,12 +544,12 @@ connect-flash@^0.1.1:
   resolved "https://registry.yarnpkg.com/connect-flash/-/connect-flash-0.1.1.tgz#d8630f26d95a7f851f9956b1e8cc6732f3b6aa30"
   integrity sha1-2GMPJtlaf4UfmVax6MxnMvO2qjA=
 
-connect-mongodb-session@^2.3.1:
-  version "2.3.1"
-  resolved "https://registry.yarnpkg.com/connect-mongodb-session/-/connect-mongodb-session-2.3.1.tgz#538b487c91e1a019293d845b51f9094cb0e54a14"
-  integrity sha512-lVgJkdXwvxuFBqFGMinV7sCulHXBiP0Xiw4Q205R+V16EztMQ9jWmhP6p6MO+mr0BtR6XVgfAvCXvQlCxl97JQ==
+connect-mongodb-session@^2.3.2:
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/connect-mongodb-session/-/connect-mongodb-session-2.3.2.tgz#f765bf56e47bafd0c52398e270e69709978965fc"
+  integrity sha512-ccMEsIIRoYXPsiOypVzyNWYIKKIgoYXTKzebLQBk+67pwiZcWNA11+Gz/j40c+Co1M5/8z3lenaO/gUV5p3Spg==
   dependencies:
-    archetype "0.10.x"
+    archetype "0.11.x"
     mongodb "3.5.x"
 
 consolidate@^0.15.1:
@@ -1608,6 +1609,11 @@ levn@~0.3.0:
   dependencies:
     prelude-ls "~1.1.2"
     type-check "~0.3.2"
+
+lodash.clonedeep@4.x:
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/lodash.clonedeep/-/lodash.clonedeep-4.5.0.tgz#e23f3f9c4f8fbdde872529c1071857a086e5ccef"
+  integrity sha1-4j8/nE+Pvd6HJSnBBxhXoIblzO8=
 
 lodash.set@4.x:
   version "4.3.2"
