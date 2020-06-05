@@ -33,6 +33,6 @@
     "nodemailer": "^6.4.8",
     "nodemailer-mailgun-transport": "^2.0.0",
     "nodemailer-sendgrid-transport": "^0.2.0",
-    "mongoose": "^5.9.17"
+    "mongoose": "^5.9.18"
   }
 }
