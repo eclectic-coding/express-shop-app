@@ -30,7 +30,7 @@
     "express": "^4.17.1",
     "express-session": "^1.17.1",
     "mongodb": "^3.5.9",
-    "nodemailer": "^6.4.10",
+    "nodemailer": "^6.4.11",
     "nodemailer-mailgun-transport": "^2.0.0",
     "nodemailer-sendgrid-transport": "^0.2.0",
     "mongoose": "^5.9.26"
