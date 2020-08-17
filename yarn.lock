@@ -128,15 +128,14 @@ anymatch@~3.1.1:
     normalize-path "^3.0.0"
     picomatch "^2.0.4"
 
-archetype@0.11.x:
-  version "0.11.3"
-  resolved "https://registry.yarnpkg.com/archetype/-/archetype-0.11.3.tgz#4bebf15e19cf939edef214f818afe29b77b59c20"
-  integrity sha512-dlZfyq5xke/qPz1l3I76HdeO3zku40wPkejUhqGpf6E7JnhUz9IgMJKPY7a7+LkOQ3/VKFJBbOGv4T+sK1vUoA==
+archetype@0.12.x:
+  version "0.12.0"
+  resolved "https://registry.yarnpkg.com/archetype/-/archetype-0.12.0.tgz#90f1090917b34cbb398ae6a2520e451219365581"
+  integrity sha512-kSuMmbcSC69EhmUtwM3pmE1dghtjqrsv9MhgTsShtHY5zOOzT5KVeLROwVYsBeq78ELPKstNw7LyTvcXgOC/cA==
   dependencies:
     lodash.clonedeep "4.x"
     lodash.set "4.x"
     mpath "0.5.1"
-    standard-error "1.1.0"
 
 array-flatten@1.1.1:
   version "1.1.1"
@@ -544,12 +543,12 @@ connect-flash@^0.1.1:
   resolved "https://registry.yarnpkg.com/connect-flash/-/connect-flash-0.1.1.tgz#d8630f26d95a7f851f9956b1e8cc6732f3b6aa30"
   integrity sha1-2GMPJtlaf4UfmVax6MxnMvO2qjA=
 
-connect-mongodb-session@^2.4.0:
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/connect-mongodb-session/-/connect-mongodb-session-2.4.0.tgz#0347d4f5180470b79b2671cc4df7fc68c6b2824e"
-  integrity sha512-FWC1k3Xp4BJu4Q/z+kKVwTmNuqppL2IETvBl8x8NamPjVWV08wi5OoRx9ZoB0e7IW1AjT3dE1TTFv9xDQE2mcQ==
+connect-mongodb-session@^2.4.1:
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/connect-mongodb-session/-/connect-mongodb-session-2.4.1.tgz#58b9cf42da129339e3a78db749f4dcb7cbda4a75"
+  integrity sha512-pfTy1fAVYPhE7nFS4k/MoBm4C14PIQYz008TrZc/HIGeJhsZuxfYI5fsfC+neBZezFK28sBGHhao+9iFIjOggw==
   dependencies:
-    archetype "0.11.x"
+    archetype "0.12.x"
     mongodb "3.6.x"
 
 consolidate@^0.15.1:
@@ -2431,11 +2430,6 @@ sshpk@^1.7.0:
     jsbn "~0.1.0"
     safer-buffer "^2.0.2"
     tweetnacl "~0.14.0"
-
-standard-error@1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/standard-error/-/standard-error-1.1.0.tgz#23e5168fa1c0820189e5812701a79058510d0d34"
-  integrity sha1-I+UWj6HAggGJ5YEnAaeQWFENDTQ=
 
 "statuses@>= 1.5.0 < 2", statuses@~1.5.0:
   version "1.5.0"
