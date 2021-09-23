@@ -18,7 +18,7 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "nodemon": "^2.0.12"
+    "nodemon": "^2.0.13"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
