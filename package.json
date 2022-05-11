@@ -28,7 +28,7 @@
     "dotenv": "^8.6.0",
     "ejs": "^3.1.8",
     "express": "^4.18.1",
-    "express-session": "^1.17.2",
+    "express-session": "^1.17.3",
     "mongodb": "^3.7.3",
     "nodemailer": "^6.7.5",
     "nodemailer-mailgun-transport": "^2.1.3",
